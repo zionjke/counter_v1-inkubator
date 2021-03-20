@@ -1,0 +1,43 @@
+.panel {
+    width: 370px;
+    height: 300px;
+    border: 2px solid aqua;
+    border-radius: 2%;
+    margin: 250px auto;
+    padding: 15px;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+    color: aqua;
+    padding-bottom: 30px;
+    border: 1px solid aqua;
+    border-radius: 2%;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid aqua;
+    border-radius: 2%;
+    padding: 35px 0 35px 0 ;
+}
+
+
+.settingsValue {
+    font-size: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.settingsValue input {
+    padding: 5px;
+}

@@ -1,0 +1,31 @@
+.panel {
+    width: 370px;
+    height: 300px;
+    border: 2px solid aqua;
+    border-radius: 2%;
+    margin: 250px auto;
+    padding: 15px;
+}
+
+.display {
+    width: 100%;
+    padding-top:30px;
+    color: aqua;
+    padding-bottom: 30px;
+    border: 1px solid aqua;
+    border-radius: 2%;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+}
+
+.buttons {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid aqua;
+    border-radius: 2%;
+    padding: 35px 0 35px 0 ;
+}

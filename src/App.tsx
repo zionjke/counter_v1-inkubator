@@ -1,20 +1,40 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Counter} from './Counter';
+import {Counter} from './components/Counter/Counter';
+import {Settings} from "./components/Settings/Settings";
 
 function App() {
-    const [startValue, setStartValue] = useState<number>(4)
+    const [startValue, setStartValue] = useState<number>(0)
     const [value, setValue] = useState<number>(startValue)
-    const [finishValue, setFinishValue] = useState<number>(9)
+    const [maxValue, setMaxValue] = useState<number>(0)
+
+    const incrementHandler = () => {
+        setValue(value + 1)
+    }
+
+    const resetHandler = () => {
+        setValue(startValue)
+    }
+
+    const settingsValue = (startValue: number, maxValue: number) => {
+        setStartValue(startValue)
+        setMaxValue(maxValue)
+        setValue(startValue)
+    }
+
+
     return (
         <div className="App">
-            <Counter value={value} finishValue={finishValue}/>
-            <div className='buttons'>
-                <button disabled={value === finishValue} onClick={() => setValue(value + 1)} className='button'>Inc
-                </button>
-                <button disabled={value === startValue} onClick={() => setValue(startValue)} className='button'>Reset
-                </button>
-            </div>
+            <Settings settingsValue={settingsValue}
+                      startValue={startValue}
+                      maxValue={maxValue}
+                      value={value}/>
+            <Counter value={value}
+                     incrementHandler={incrementHandler}
+                     resetHandler={resetHandler}
+                     startValue={startValue}
+                     maxValue={maxValue}
+            />
         </div>
     );
 }
